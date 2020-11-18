@@ -13,4 +13,4 @@ const dbConnect = () => {
 	db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 	}
 	
-module.exports=dbConnect;
+module.exports = dbConnect;

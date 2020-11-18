@@ -14,6 +14,7 @@ app.use(cors())
 app.use('/api/flowers', require('./routes/api/flowers'))
 app.use('/api/userRegister', require('./routes/api/userRegister'))
 app.use('/api/userLogin', require('./routes/api/userLogin'))
+app.use('/api/occasions', require('./routes/api/allOccasions'))
 
 const port = 5000
 app.listen(port, () => console.log('server is up'))
