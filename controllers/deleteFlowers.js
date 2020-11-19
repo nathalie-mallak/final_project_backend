@@ -1,4 +1,4 @@
-const Flower = require('../models/flowers')
+const Flower = require('../models/items')
 
 module.exports = (req, res) => {
 

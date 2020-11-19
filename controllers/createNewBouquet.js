@@ -1,8 +1,10 @@
-const Bouquet = require('../models/bouquetOccasions')
+const Bouquet = require('../models/bouquets')
 
 module.exports = (req, res) => {
 
-    Bouquet.create({name: req.body.name, price: req.body.price, description: req.body.description, type: req.body.type})
+    const { name, price, description, type } = req.body
+
+    Bouquet.create({name, type, price, description})
         .then(bouquet => res.status(200).json(bouquet))
         .catch(err => res.status(500).json({
             message: 'Internal Server Error',

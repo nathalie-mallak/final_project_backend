@@ -1,7 +1,6 @@
 const bcrypt = require('bcryptjs')
 const config = require('config')
 const jwt = require('jsonwebtoken')
-
 const User = require('../models/users')
 
 module.exports = (req, res) => {
@@ -38,9 +37,6 @@ module.exports = (req, res) => {
                 phone
             })
 
-            User.create()
-                .then(res => {
-
             // salt: to create a hash
             bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -69,6 +65,5 @@ module.exports = (req, res) => {
                         })
                 })
             })
-        })
         })
 }

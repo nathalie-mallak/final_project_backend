@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const FlowerSchema = new Schema({
+const ItemSchema = new Schema({
 	name: {
 		type: String,
 		required: true
@@ -20,5 +20,5 @@ const FlowerSchema = new Schema({
 	}
 })
 
-const flower = mongoose.model('flowers', FlowerSchema)
-module.exports = flower
+const item = mongoose.model('items', ItemSchema)
+module.exports = item

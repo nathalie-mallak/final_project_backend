@@ -1,4 +1,4 @@
-const Bouquet = require('../models/bouquetOccasions')
+const Bouquet = require('../models/bouquets')
 
 module.exports = (req, res) => {
 
