@@ -17,6 +17,11 @@ const ItemSchema = new Schema({
 	price: {
 		type: Number,
 		required: true
+	},
+	image: {
+		// buffer allows us to store imgs in the form of arrays
+		data: Buffer,
+		contentType: String
 	}
 })
 
