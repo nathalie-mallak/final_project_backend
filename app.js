@@ -14,6 +14,8 @@ app.use(cors())
 
 // use routes
 app.use('/api/flowers', require('./routes/api/flowers'))
+app.use('/api/baskets', require('./routes/api/baskets'))
+app.use('/api/noteCards', require('./routes/api/noteCards'))
 app.use('/api/userRegister', require('./routes/api/userRegister'))
 app.use('/api/userLogin', require('./routes/api/userLogin'))
 app.use('/api/occasions', require('./routes/api/allOccasions'))

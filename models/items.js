@@ -8,21 +8,23 @@ const ItemSchema = new Schema({
 	},
 	color: {
 		type: String,
-		required: true
 	},
 	description: {
 		type: String,
-		required: true
 	},
 	price: {
 		type: Number,
 		required: true
 	},
+	type: {
+		type: String,
+		required: true
+	},
 	image: {
 		// buffer allows us to store imgs in the form of arrays
 		data: Buffer,
-		contentType: String
-	}
+		contentType: String,
+	},
 })
 
 const item = mongoose.model('items', ItemSchema)

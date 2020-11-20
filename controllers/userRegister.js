@@ -8,7 +8,6 @@ module.exports = (req, res) => {
     const { 
         fname,
         lname,
-        age,
         dob,
         email, 
         password,
@@ -17,7 +16,7 @@ module.exports = (req, res) => {
     } = req.body
 
     //data validation
-    if(!fname || !lname || !age || !dob || !email || !password || !gender || !phone) {
+    if(!fname || !lname || !dob || !email || !password || !gender || !phone) {
         return res.status(400).json({message: 'Please fill the empty fields'})
     }
 
@@ -29,7 +28,6 @@ module.exports = (req, res) => {
             const newUser = new User({
                 fname,
                 lname,
-                age,
                 dob,
                 email, 
                 password,

@@ -2,13 +2,13 @@ const Flower = require('../models/items')
 
 module.exports = (req, res) => {
 
-    const { name, price, description, color } = req.body
+    const { name, price, description, color, image, type } = req.body
        
-    if (!name || !color || !description || !price) {
+    if (!name || !color || !description || !price || !image || !type) {
         return res.status(400).json({message: 'Please fill the empty fields'})
     }
 
-    Flower.create({ name, price, description, color })
+    Flower.create({ name, price, description, color, image, type })
         .then(flower => {
             res.status(200).json(flower)                   
         })
