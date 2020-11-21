@@ -20,11 +20,11 @@ const ItemSchema = new Schema({
 		type: String,
 		required: true
 	},
-	image: {
-		// buffer allows us to store imgs in the form of arrays
-		data: Buffer,
-		contentType: String,
-	},
+	// image: {
+	// 	// buffer allows us to store imgs in the form of arrays
+	// 	data: Buffer,
+	// 	contentType: String,
+	// },
 })
 
 const item = mongoose.model('items', ItemSchema)
