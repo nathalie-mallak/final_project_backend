@@ -1,10 +1,10 @@
 const Flower = require('../models/items')
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
     const { name, price, description, color, type } = req.body
        
-    if (!name || !color || !description || !price || !type) {
+    if (!name || !description || !price || !type) {
         return res.status(400).json({message: 'Please fill the empty fields'})
     }
 

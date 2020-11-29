@@ -4,7 +4,7 @@ module.exports = (req, res) => {
 
     const { name, color, price, type } = req.body
 
-    if(!name || !price || !color || !type)
+    if(!name || !price || !type)
     {
         return res.status(400).json({message: 'Please fill the empty fields'})
     }

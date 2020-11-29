@@ -1,6 +1,6 @@
 const Basket = require('../models/items')
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
     const { name, price, description, type } = req.body
 

@@ -1,6 +1,6 @@
 const Admin = require('../models/users')
 
-module.exports = (req, res) => {
+module.exports = async(req, res) => {
 
     Admin.findById(req.user.id)
     // it will discard the password

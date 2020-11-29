@@ -20,12 +20,14 @@ const ItemSchema = new Schema({
 		type: String,
 		required: true
 	},
-	// image: {
-	// 	// buffer allows us to store imgs in the form of arrays
-	// 	data: Buffer,
-	// 	contentType: String,
-	// },
-})
+	imgUrl: {
+		type: String
+	}
+}, {
+	//tells the db to automatically save the creation and update timestamp of each entry
+    timestamps: true
+	}
+)
 
 const item = mongoose.model('items', ItemSchema)
 module.exports = item

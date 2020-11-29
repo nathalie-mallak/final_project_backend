@@ -1,8 +1,8 @@
 const Bouquet = require('../models/bouquets')
 
-module.exports = (req, res) => {
+module.exports = async(req, res) => {
 
-    const { name, price, description, type } = req.body
+    const { name, price, type, description } = req.body
 
     Bouquet.create({name, type, price, description})
         .then(bouquet => res.status(200).json(bouquet))
